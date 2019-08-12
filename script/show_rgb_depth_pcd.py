@@ -25,7 +25,6 @@ def list_all_files(rootdir):
     return _files
 
 if __name__ == "__main__":
-    base_dir = "./dataset/"
     if(len(sys.argv) != 2):
         print("Must provide dir to show")
         sys.exit(0)
@@ -33,7 +32,7 @@ if __name__ == "__main__":
     pinhole_camera_intrinsic = o3d.io.read_pinhole_camera_intrinsic(
             "./TestData/camera_kinect3.json")
 
-    root_dir = base_dir + sys.argv[1] + "/"
+    root_dir = sys.argv[1] + "/"
     color_dir = root_dir + 'image/'
     depth_dir = root_dir + 'depth/'
     color_files = list_all_files(color_dir)

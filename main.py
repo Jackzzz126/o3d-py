@@ -46,7 +46,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # check folder structure
-    with open("./config.js") as json_file:
+    with open("./config.json") as json_file:
         config = json.load(json_file)
         initialize_config(config)
         check_folder_structure(config["path_dataset"])

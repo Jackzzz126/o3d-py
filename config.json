@@ -1,6 +1,6 @@
 {
     "name": "Open3D reconstruction test",
-    "path_dataset": "dataset/1/",
+    "path_dataset": "dataset/test/",
     "path_intrinsic": "",
     "max_depth": 3.0,
     "voxel_size": 0.05,

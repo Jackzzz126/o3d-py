@@ -18,25 +18,25 @@ _log_level = 0
 def debug(*arg):
     if(_log_level > DEBUG):
         return
-    print("%c[%d;%dm" % (0x1B, 0, 32), end='')
+    print("%c[%d;%dm" % (0x1B, 0, 35), end='')
     print(*arg)
     print("%c[0;m" % (0x1B), end='')
 def info(*arg):
     if(_log_level > INFO):
         return
-    print("%c[%d;%dm" % (0x1B, 0, 36), end='')
+    print("%c[%d;%dm" % (0x1B, 0, 35), end='')
     print(*arg)
     print("%c[0;m" % (0x1B), end='')
 def warn(*arg):
     if(_log_level > WARN):
         return
-    print("%c[%d;%dm" % (0x1B, 0, 33), end='')
+    print("%c[%d;%dm" % (0x1B, 0, 35), end='')
     print(*arg)
     print("%c[0;m" % (0x1B), end='')
 def error(*arg):
     if(_log_level > ERROR):
         return
-    print("%c[%d;%dm" % (0x1B, 0, 31), end='')
+    print("%c[%d;%dm" % (0x1B, 0, 35), end='')
     print(*arg)
     print("%c[0;m" % (0x1B), end='')
 def set_log_level(log_level):

@@ -52,7 +52,6 @@ if __name__ == "__main__":
         check_folder_structure(config["path_dataset"])
     assert config is not None
 
-    clog.debug("====================================")
     clog.debug("Configuration")
     clog.debug("====================================")
     for key, val in config.items():
@@ -60,6 +59,8 @@ if __name__ == "__main__":
 
     times = [0, 0, 0, 0]
     if args.make:
+        clog.debug("Make")
+        clog.debug("====================================")
         start_time = time.time()
         import make_fragments
         make_fragments.run(config)
@@ -80,7 +81,6 @@ if __name__ == "__main__":
     #    integrate_scene.run(config)
     #    times[3] = time.time() - start_time
 
-    clog.debug("====================================")
     clog.debug("Elapsed time (in h:m:s)")
     clog.debug("====================================")
     clog.debug("- Making fragments    %s" % datetime.timedelta(seconds=times[0]))

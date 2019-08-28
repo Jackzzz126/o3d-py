@@ -7,9 +7,8 @@ import sys
 import time, datetime
 import json
 
-sys.path.append("./Utility")
+sys.path.append("./util")
 from file import check_folder_structure
-sys.path.append(".")
 from initialize_config import initialize_config
 
 import color_log as clog
